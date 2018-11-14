@@ -14,7 +14,7 @@ import jp.co.rakus.stockmanagement.form.MemberForm;
 import jp.co.rakus.stockmanagement.service.MemberService;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/")
 public class MemberController {
 	
 	
@@ -29,7 +29,7 @@ public class MemberController {
 	
 	
 	
-	@RequestMapping("/input")
+	@RequestMapping("/")
 	public String input() {
 		return "member/newmember";
 	}
@@ -66,7 +66,7 @@ public class MemberController {
 		//serviceでメンバーを新規登録する
 		service.save(member);
 		
-		return "member/newmember";
+		return "redirect:/login/login";
 	}
 	
 	

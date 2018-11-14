@@ -6,6 +6,13 @@ public class Member {
 	private String password;
 	private String mailAddress;
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + ", password=" + password + ", mailAddress=" + mailAddress + "]";
+	}
+
 	public Member() {};
 	
 	public Member(Integer id, String name, String password, String mailAddress) {

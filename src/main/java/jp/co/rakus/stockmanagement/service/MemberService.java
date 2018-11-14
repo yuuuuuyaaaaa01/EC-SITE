@@ -35,6 +35,10 @@ public class MemberService {
 		return encodedPassword;
 	}
 	
+	//平文のパスワードと暗号化されたパスワードを比較。あっていればtrueを返す。
+	public boolean isMatchPassword(String rowPassword, String encodedPassword) {
+	return passwordEncoder.matches(rowPassword, encodedPassword);
+	}
 	
 	
 	

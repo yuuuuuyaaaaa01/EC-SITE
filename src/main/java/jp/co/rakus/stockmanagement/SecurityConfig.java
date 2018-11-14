@@ -15,7 +15,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity // Spring Securityのウェブ用の機能を利用する
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-
 	/**
 	 * このメソッドをオーバーライドすることで、認可の設定や
 	 * ログインアウトに関する設定ができる.

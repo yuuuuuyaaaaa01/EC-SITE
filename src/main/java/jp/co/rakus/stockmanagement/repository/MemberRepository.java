@@ -27,7 +27,7 @@ public class MemberRepository {
 		String mailAddress = rs.getString("mail_address");
 		String password = rs.getString("password");
 		
-		return new Member(id,name,mailAddress,password);
+		return new Member(id,name,password,mailAddress);
 	}; 
 	
 	
@@ -61,8 +61,6 @@ public class MemberRepository {
 		
 		//　list が　空だったら mail の重複はない。
 		List<Member> members = template.query(sql,param,MEMBER_ROW_MAPPER);
-		
-		System.out.println("memberS="+members.toString());	
 		
 		if( members.isEmpty() ) {
 			return null;
