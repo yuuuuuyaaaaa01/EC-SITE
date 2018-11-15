@@ -48,9 +48,8 @@ public class LoginController {
 			return "login/loginForm";
 		}
 	
-		
 		// mail と　パスワードが一致していれば、
-		return "order/order";
+		return "redirect:/order/order";
 	}
 	
 	
