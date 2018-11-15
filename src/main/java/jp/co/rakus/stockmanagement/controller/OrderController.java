@@ -60,11 +60,16 @@ public class OrderController {
 		return "order/cartlist";
 	}
 	
+	/**
+	 * sessionスコープに入っている一時的なカートの中身を削除する.
+	 * 
+	 * @param index
+	 * @return
+	 */
 	@RequestMapping("/delete")
 	public String deleteCartItem(int index) {
 		List<Pizza> cartItems = (List<Pizza>) session.getAttribute("cartItems");
-		cartItems.remove(index);
-		
+		cartItems.remove(index);	
 		return "redirect:/order/cartList";
 	}
 	

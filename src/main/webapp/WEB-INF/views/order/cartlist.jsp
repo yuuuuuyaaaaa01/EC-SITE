@@ -10,6 +10,32 @@
 </head>
 <body>
 
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbarEexample7">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> 🍕 </a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbarEexample7">
+				<ul class="nav navbar-nav">
+					<li><a href="/order/order">商品一覧を見る</a></li>
+					<li class="active"><button type="button" class="btn btn-default navbar-btn"><a href="/">ログイン</a></button></li>
+					<li><button type="button" class="btn btn-default navbar-btn">ログアウト</button></li>
+				</ul>
+				<p class="navbar-text navbar-right">
+					ようこそ <a href="#" class="navbar-link">ゲスト</a> さん。
+				</p>
+			</div>
+		</div>
+	</nav>
+
+
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-6 col-md-3">
@@ -22,7 +48,7 @@
 		<div class="card-deck">
 		<div class="card" style="width: 20rem;">
 		<div class="card-body">
-			<img class="img-thumbnail" src="../../../image/neko.jpg" alt="Card image cap">
+			<img class="img-thumbnail" src="../../../image/pizza.jpg" alt="Card image cap">
 			<div class="card-title"><c:out value="${cartItem.name}"/></div>
 			<div class="card-text"><c:out value="${cartItem.price}"/>円</div>
 		<form:form action="${pageContext.request.contextPath}/order/delete" method="POST">

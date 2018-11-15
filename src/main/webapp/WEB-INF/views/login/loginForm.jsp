@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+
 	<p>ログインフォーム</p>
 	<!-- form が発射されたときに、modelAttributeで結び付ける -->
 	<form:form modelAttribute="loginForm" action="${pageContext.request.contextPath}/login/login" method="POST">
